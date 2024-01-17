@@ -1,0 +1,13 @@
+root
+admin
+test
+guest
+info
+mysql
+user
+administrator
+oracle
+ftp
+chris
+greg
+john
