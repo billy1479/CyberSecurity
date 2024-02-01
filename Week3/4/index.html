@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+  <!-- Navigation Links -->
+  <ul class="sidenav">
+    <li data-index="home">
+      <a class="active" href="#home">Home</a>
+    </li>
+    <li data-index="chat">
+      <a href="#chat">Chat</a>
+    </li>
+    <li data-index="about">
+      <a href="#about">About</a>
+    </li>
+    <li data-index="login">
+      <a href="#login">Login</a>
+    </li>
+  </ul>
+
+  <!-- Content -->
+  <div class="content" id="home">
+    <h2>This will be a secure & responsive website</h2>
+    <p>This HTML text is in index.html which is served by a "<i>private</i>" <a href='server.py'>server.py</a></p>
+    <p>The style.css theme, client-sided script.js and favicon.ico are also requested and served by server.py</p>
+    <p>There is a public chat area "Chat" and a private member only area "Login".</p>
+  </div>
+  <div class="content hidden" id="chat">
+    <p><b>Public Messages</b></p>
+    <div id="result" style="display:block; max-height:144px; overflow-y:scroll;">Write some messages here</div>
+    <p><b>Send Chat Message</b></p>
+    <input type="text" id="nameInput" placeholder="Type your full name">
+    <textarea id="messageInput" style="height:100px;" placeholder="Type a message"></textarea>
+    <input type="submit" value="Refresh" id="refresh">
+    <input type="submit" value="Submit" id="submit">
+    <br>
+  </div>
+  <div class="content hidden" id="about">
+    <h2>Powered by</h2>
+    <p>CSS3 for dynamic resizing, jQuery to change content dynamically when &ltli&gt links are clicked.</p>
+    <p>Python for the server backend.</p>
+    <p>Just don't use the server backend in any real-world application as it is insecure on purpose.</p>
+    <p>The source code is released by Chris to the <a href="https://github.com/nothings/stb/blob/master/docs/why_public_domain.md">public domain</a>.</p>
+  </div>
+  <div class="content hidden" id="login">
+    <h2>Private Member Area</h2>
+    <p>This area is restricted to invited members.</p>
+    <input type="password" id="password" placeholder="Type the secret member password to gain entry.">
+    <input type="submit" value="Login" id="login">
+    <br>
+    <br>
+    <div class="private hidden" id="private"></div>
+  </div>
+</body>
+
+</html>
